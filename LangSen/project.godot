@@ -1,0 +1,26 @@
+[application]
+config/name="Làng Sen"
+config/description="Game mô phỏng nông dân Việt Nam"
+run/main_scene="res://scenes/main.tscn"
+config/icon="res://assets/icon.png"
+
+[autoload]
+GameManager="*res://scripts/game_manager.gd"
+
+[display]
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/mode=0
+window/size/always_on_top=false
+window/handheld/orientation=1
+
+[rendering]
+renderer/rendering_method=gl_compatibility
+
+[input]
+ui_accept={ "deadzone": 0.5, "events": [ { "type": 0, "device": 0, "index": 0, "code": 4194309 } ] }
+ui_cancel={ "deadzone": 0.5, "events": [ { "type": 0, "device": 0, "index": 0, "code": 4194305 } ] }
+move_left={ "deadzone": 0.5, "events": [ { "type": 0, "device": -1, "index": 0, "code": 65 }, { "type": 0, "device": -1, "index": 0, "code": 4194319 } ] }
+move_right={ "deadzone": 0.5, "events": [ { "type": 0, "device": -1, "index": 0, "code": 68 }, { "type": 0, "device": -1, "index": 0, "code": 4194321 } ] }
+move_up={ "deadzone": 0.5, "events": [ { "type": 0, "device": -1, "index": 0, "code": 87 }, { "type": 0, "device": -1, "index": 0, "code": 4194320 } ] }
+move_down={ "deadzone": 0.5, "events": [ { "type": 0, "device": -1, "index": 0, "code": 83 }, { "type": 0, "device": -1, "index": 0, "code": 4194322 } ] }
