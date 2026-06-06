@@ -8,8 +8,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Dịch vụ', href: '/services' },
-    { name: 'Sản phẩm Demo', href: '/demo' },
+    { name: 'Dự án', href: '/demo' },
     { name: 'Về chúng tôi', href: '/about' },
+    { name: 'Liên hệ', href: '/contact' },
   ];
 
   return (
@@ -29,9 +30,9 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <Link key={link.name} to={link.href} className="hover:text-white transition-colors focus-visible:outline-white">{link.name}</Link>
           ))}
-          <a href="/#contact" className="px-8 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition-all duration-300 font-black tracking-widest focus-visible:outline-white">
-            KẾT NỐI
-          </a>
+          <Link to="/contact" className="px-8 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition-all duration-300 font-black tracking-widest focus-visible:outline-white">
+            LIÊN HỆ
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -75,11 +76,11 @@ const Navbar = () => {
               </Link>
             ))}
             <a 
-              href="/#contact" 
+              href="/contact" 
               onClick={() => setIsOpen(false)}
               className="mt-8 px-12 py-5 bg-white text-black font-black uppercase text-sm tracking-widest rounded-full"
             >
-              Kết nối ngay
+              Liên hệ ngay
             </a>
           </motion.div>
         )}

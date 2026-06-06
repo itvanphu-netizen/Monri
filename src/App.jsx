@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import PageServices from './pages/Services';
 import CaseStudies from './pages/CaseStudies';
+import ContactPage from './pages/Contact';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -33,6 +34,7 @@ function App() {
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
               <Route path="/services" element={<PageTransition><PageServices /></PageTransition>} />
               <Route path="/demo" element={<PageTransition><CaseStudies /></PageTransition>} />
+              <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
             </Routes>
           </AnimatePresence>
         </main>
