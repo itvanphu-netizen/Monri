@@ -88,7 +88,7 @@ const HeroAbout = () => (
           <div className="mt-16 pt-8 border-t border-white/10 grid sm:grid-cols-3 gap-6 text-sm">
             {[
               { label: 'Thành lập', value: '09 / 11 / 2018' },
-              { label: 'Trụ sở', value: 'Phường An Phú, TP. Thủ Đức, TP.HCM' },
+              { label: 'Trụ sở', value: 'Số 1 Bùi Tá Hán, Phường Bình Trưng, TP. Hồ Chí Minh' },
               { label: 'Người đại diện', value: 'Vũ Thị Ngọc Hương' },
             ].map(({ label, value }) => (
               <div key={label}>

@@ -82,8 +82,8 @@ const Contact = () => {
                </div>
                <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider mb-1">Email</p>
-                  <a href="mailto:hello@monri.agency" className="text-white/90 hover:text-white transition-colors">
-                    hello@monri.agency
+                  <a href="mailto:Vungochuong@monri.vn" className="text-white/90 hover:text-white transition-colors">
+                    Vungochuong@monri.vn
                   </a>
                </div>
             </div>
@@ -93,8 +93,8 @@ const Contact = () => {
                </div>
                <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider mb-1">Hotline</p>
-                  <a href="tel:+84900000000" className="text-white/90 hover:text-white transition-colors">
-                    +84 9xx xxx xxx
+                  <a href="tel:+84968651433" className="text-white/90 hover:text-white transition-colors">
+                    +84 968 651 433
                   </a>
                </div>
             </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                </div>
                <div>
                   <p className="text-xs text-white/40 uppercase tracking-wider mb-1">Văn phòng</p>
-                   <p className="text-white/90">Phường An Phú, TP. Thủ Đức, TP.HCM</p>
+                   <p className="text-white/90">Số 1 Bùi Tá Hán, Phường Bình Trưng, TP. Hồ Chí Minh</p>
                </div>
             </div>
           </div>

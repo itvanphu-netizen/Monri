@@ -375,8 +375,7 @@ const ContactInfo = () => (
       <p className="text-xs text-white/40 uppercase tracking-widest font-black mb-5">Văn phòng làm việc</p>
       <div className="space-y-4">
         {[
-          { label: 'Trụ sở chính (Hà Nội)', value: '[Địa chỉ văn phòng Hà Nội]' },
-          { label: 'Chi nhánh (TP. Hồ Chí Minh)', value: 'Phường An Phú, TP. Thủ Đức, TP.HCM' },
+          { label: 'Văn phòng (TP. Hồ Chí Minh)', value: 'Số 1 Bùi Tá Hán, Phường Bình Trưng, TP. Hồ Chí Minh' },
         ].map(({ label, value }) => (
           <div key={label} className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
@@ -405,8 +404,8 @@ const ContactInfo = () => (
       <p className="text-xs text-white/40 uppercase tracking-widest font-black mb-5">Kênh tương tác nhanh</p>
       <div className="space-y-4">
         {[
-          { icon: Phone, label: 'Hotline tư vấn dịch vụ', value: '[Số hotline Monri]', href: '#' },
-          { icon: Mail,  label: 'Email tiếp nhận hồ sơ dự án', value: 'vungochuong@monri.vn', href: 'mailto:vungochuong@monri.vn' },
+          { icon: Phone, label: 'Hotline tư vấn dịch vụ', value: '+84 968 651 433', href: 'tel:+84968651433' },
+          { icon: Mail,  label: 'Email tiếp nhận hồ sơ dự án', value: 'Vungochuong@monri.vn', href: 'mailto:Vungochuong@monri.vn' },
         ].map(({ icon: Icon, label, value, href }) => (
           <div key={label} className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
@@ -600,6 +599,52 @@ const ContactBottomCTA = () => (
 );
 
 /* ══════════════════════════════════════════════════════════════════
+   MAP SECTION
+══════════════════════════════════════════════════════════════════ */
+const MapSection = () => (
+  <section className="py-0 bg-black">
+    <div className="max-w-7xl mx-auto px-6 pb-0">
+      <FadeUp>
+        <div className="flex items-center gap-3 mb-6 pt-0">
+          <div className="h-px w-12 bg-white/30" />
+          <span className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase">Tìm chúng tôi</span>
+        </div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">Văn Phòng Monri Agency</h2>
+            <p className="text-white/45 text-sm mt-1">Số 1 Bùi Tá Hán, Phường Bình Trưng, TP. Hồ Chí Minh, Việt Nam</p>
+          </div>
+          <a
+            href="https://maps.google.com/?q=Số+1+Bùi+Tá+Hán,+Phường+Bình+Trưng+Tây,+TP.+Hồ+Chí+Minh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 text-sm font-bold text-white/60 hover:bg-white hover:text-black transition-all"
+          >
+            <MapPin className="w-4 h-4" />
+            Mở Google Maps
+          </a>
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.1}>
+        <div className="w-full h-[400px] md:h-[480px] rounded-3xl overflow-hidden border border-white/10">
+          <iframe
+            title="Monri Agency – Bản đồ văn phòng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1!2d106.7647!3d10.7986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527b7e3d7a1c9%3A0x0!2zU-G7kSAxIELDuWkgVMOhIEjDoW4sIFBow7fhu51uZyBCw6xuaCBUcsawbmcsIFRQLiBIw7MgQ2jDrSBNaW5o!5e0!3m2!1svi!2svn!4v1700000000000"
+            width="100%"
+            height="100%"
+            style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) saturate(0.8)' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </FadeUp>
+    </div>
+  </section>
+);
+
+/* ══════════════════════════════════════════════════════════════════
    PAGE ASSEMBLY
 ══════════════════════════════════════════════════════════════════ */
 const ContactPage = () => (
@@ -643,6 +688,7 @@ const ContactPage = () => (
     </section>
 
     <ProcessNDA />
+    <MapSection />
     <ContactBottomCTA />
   </div>
 );

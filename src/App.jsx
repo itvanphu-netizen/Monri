@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import PageTransition from './components/PageTransition';
+import IntroOverlay from './components/IntroOverlay';
 import Home from './pages/Home';
 import About from './pages/About';
 import PageServices from './pages/Services';
@@ -21,10 +22,24 @@ function ScrollToTop() {
 }
 
 function App() {
+  // Show intro only once per browser session
+  const [showIntro, setShowIntro] = useState(
+    () => !sessionStorage.getItem('monri_intro_done')
+  );
+
+  const handleIntroDone = () => {
+    sessionStorage.setItem('monri_intro_done', '1');
+    setShowIntro(false);
+  };
+
   return (
     <Router>
       <ScrollToTop />
       <CustomCursor />
+
+      {/* Intro overlay — rendered on top of everything, dismissed once */}
+      {showIntro && <IntroOverlay onDone={handleIntroDone} />}
+
       <div className="bg-black text-white selection:bg-white selection:text-black">
         <Navbar />
         <main>
